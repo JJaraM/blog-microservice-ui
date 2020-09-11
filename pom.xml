@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jjara.microservice</groupId>
     <artifactId>blog-microservice-ui</artifactId>
     <version>1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Microservice Post</name>
-    <description>Microservice used to Tag CRUD Operations</description>
-    <url>https://blog-microservice-tag.herokuapp.com</url>
+    <name>Microservice UI</name>
+    <description>Project that will generate an index page that can be used as default page</description>
 
     <licenses>
         <license>
@@ -27,7 +26,7 @@
     </developers>
 
     <scm>
-        <url>https://github.com/JJaraM/blog-microservice-tag</url>
+        <url>https://github.com/JJaraM/blog-microservice-ui</url>
     </scm>
 
     <properties>
