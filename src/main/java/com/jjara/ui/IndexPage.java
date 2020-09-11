@@ -9,15 +9,16 @@ public class IndexPage {
     private final static String filePath = "public/index.html";
     private static String index = null;
 
-    public static String getIndex(final String title, final String description, final String stackTech) {
+    public static String getIndex(final String title, final String description, final String stackTech, final String gitRepo) {
         if (index == null) {
             var classLoader = IndexPage.class.getClassLoader();
             var inputStream = classLoader.getResourceAsStream(filePath);
             index = new BufferedReader(new InputStreamReader(inputStream)).lines().collect(Collectors.joining("\n"));
             index = index
-                    .replaceAll("[TITLE]", title)
-                    .replaceAll("[DESCRIPTION]", description)
-                    .replaceAll("[TECH_STACK]", stackTech);
+                    .replaceAll("\\[TITLE\\]", title)
+                    .replaceAll("\\[DESCRIPTION\\]", description)
+                    .replaceAll("\\[TECH_STACK\\]", stackTech)
+                    .replaceAll("\\[GIT_REPO\\]", gitRepo);
         }
         return index;
     }
