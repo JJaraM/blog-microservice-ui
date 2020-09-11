@@ -14,6 +14,10 @@ public class IndexPage {
             var classLoader = IndexPage.class.getClassLoader();
             var inputStream = classLoader.getResourceAsStream(filePath);
             index = new BufferedReader(new InputStreamReader(inputStream)).lines().collect(Collectors.joining("\n"));
+            index = index
+                    .replaceAll("[TITLE]", title)
+                    .replaceAll("[DESCRIPTION]", description)
+                    .replaceAll("[TECH_STACK]", stackTech);
         }
         return index;
     }
