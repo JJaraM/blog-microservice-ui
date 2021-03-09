@@ -18,7 +18,8 @@ public class IndexPage {
                     .replaceAll("\\[TITLE\\]", title)
                     .replaceAll("\\[DESCRIPTION\\]", description)
                     .replaceAll("\\[TECH_STACK\\]", stackTech)
-                    .replaceAll("\\[GIT_REPO\\]", gitRepo);
+                    .replaceAll("\\[GIT_REPO\\]", gitRepo)
+                    .replaceAll("\\[SWAGGER_LINK\\]", gitRepo);
         }
         return index;
     }
