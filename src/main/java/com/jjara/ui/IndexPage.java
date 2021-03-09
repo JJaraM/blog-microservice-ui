@@ -9,7 +9,7 @@ public class IndexPage {
     private final static String filePath = "public/index.html";
     private static String index = null;
 
-    public static String getIndex(final String title, final String description, final String stackTech, final String gitRepo) {
+    public static String getIndex(final String title, final String description, final String stackTech, final String gitRepo, final String swaggerLink) {
         if (index == null) {
             var classLoader = IndexPage.class.getClassLoader();
             var inputStream = classLoader.getResourceAsStream(filePath);
@@ -19,7 +19,7 @@ public class IndexPage {
                     .replaceAll("\\[DESCRIPTION\\]", description)
                     .replaceAll("\\[TECH_STACK\\]", stackTech)
                     .replaceAll("\\[GIT_REPO\\]", gitRepo)
-                    .replaceAll("\\[SWAGGER_LINK\\]", gitRepo);
+                    .replaceAll("\\[SWAGGER_LINK\\]", swaggerLink);
         }
         return index;
     }
